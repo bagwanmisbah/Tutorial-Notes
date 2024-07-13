@@ -1,5 +1,5 @@
 //AUTHOR :  MISBAH BAGWAN 21487
-//WAP to demonstrate default parameterised constructor
+//WAP to demonstrate STATIC DATA MEMBER
 #include <iostream>
 using namespace std;
 class student
