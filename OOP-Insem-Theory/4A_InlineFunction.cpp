@@ -1,5 +1,5 @@
 //AUTHOR :  MISBAH BAGWAN 21487
-//WAP to demonstrate default parameterised constructor
+//WAP to demonstrate Inline Function
 #include<iostream>
 using namespace std;
 class number
