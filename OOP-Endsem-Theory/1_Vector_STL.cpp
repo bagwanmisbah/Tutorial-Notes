@@ -1,6 +1,6 @@
 //AUTHOR :  MISBAH BAGWAN 21487
 //WAP to demonstrate all functions of VECTOR 
-iostream>
+#include <iostream>
 #include <vector>
 #include <iterator>
 using namespace std;
