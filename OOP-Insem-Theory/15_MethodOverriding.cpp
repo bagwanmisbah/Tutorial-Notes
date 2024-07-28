@@ -26,5 +26,5 @@ int main()
     b.put();
     return 0;
 }
-From base class : 500
-From derived class : 20
+// From base class : 500
+// From derived class : 20
