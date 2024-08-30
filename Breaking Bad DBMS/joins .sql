@@ -173,7 +173,25 @@ Walter white jr      HR                        watching the greatest show of all
 Holly White          HR                        watching the greatest show of all times                
 
 
+--to Count Employees in Each Department
+SELECT 
+    d.dname AS Department_Name, 
+    COUNT(e.eno) AS Total_Employees
+FROM 
+    dept d
+LEFT JOIN 
+    emp e ON d.dno = e.dno
+GROUP BY 
+    d.dname;
 
+Department_Name           Total_Employees
+------------------------- ---------------
+CHEMISTRY                               2
+DESIGN                                  0
+FINANCE                                 1
+HR                                      3
+LEGAL ADVISORS                          2
+SALES                                   4
 
 
 
