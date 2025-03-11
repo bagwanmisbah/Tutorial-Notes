@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>jQuery Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+  <h2>This is a Heading</h2>
+  <p class="para">This is a paragraph.</p>
+  <p id="demo">This text will change.</p>
+
+  <button id="btn1">Change Paragraph</button>
+  <button id="btn2">Hide Heading</button>
+
+  <script>
+    $(document).ready(function () {
+      // Class selector to change paragraph text
+      $("#btn1").click(function () {
+        $(".para").text("Paragraph text changed!");
+      });
+
+      // ID selector to hide heading
+      $("#btn2").click(function () {
+        $("h2").hide();
+      });
+
+      // Tag selector to change demo text
+      $("#demo").click(function () {
+        $(this).text("You clicked on me!");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

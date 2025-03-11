@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>DOM Example</title>
+</head>
+
+<body>
+
+  <h2>Enter Your Name</h2>
+  <input type="text" id="nameInput">
+  <input type="number" id="no">
+  <button onclick="displayName()">Submit</button>
+
+  <p id="op1"></p>
+  <p id="op2"></p>
+  <h3 id="h3_1">This heading will be hidden after click</h3>
+
+  <script>
+    // JavaScript function to use DOM
+    function displayName() {
+      // Access input field and paragraph using DOM
+      var name = document.getElementById("nameInput").value;
+      var num=document.getElementById("no").value;
+
+      // Change the content of <p> using innerHTML
+      document.getElementById("op1").innerHTML = "Hello, " + name + "!";
+      document.getElementById("op2").innerHTML="Number you entered is : " +num+ ".";
+      document.getElementById("h3_1").style.display="none"
+    }
+  </script>
+
+</body>
+
+</html>

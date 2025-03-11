@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>CSS Inheritance Example</title>
+    <style>
+      body
+      {
+        color:blue;
+        font-family:Arial,sans-serif;
+        border:2px;
+      }
+      p
+      {
+        font-size:20px;
+        color:inherit;
+      }
+    </style>
+
+  </head>
+  <body>
+    <p>This is main Paragraph</p>
+    <div>
+      <p>This Paragraph is inside a division and inherits styles of parent element</p>
+    </div>
+  </body>
+</html>
+
+<!-- The color: blue; and font-family: Arial; styles apply to all child elements (<p>,
+<div>).
+  The border: 2px solid black; is not inherited by the <p> or
+  <div> elements.
+    The <p> tag inherits font-size: 20px; from its own CSS rule. -->

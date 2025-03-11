@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="">
+
+  <h2>AngularJS Data Binding Example</h2>
+
+  <!-- ng-model Example -->
+  <label>Enter your name:</label>
+  <input type="text" ng-model="name">
+  <p>Your name is: {{ name }}</p>
+
+  <!-- ng-init Example -->
+  <div ng-init="message='Welcome to AngularJS'">
+    <p>{{ message }}</p>
+  </div>
+
+  <!-- ng-bind Example -->
+  <p ng-bind="name"></p>
+
+  <!-- ng-repeat Example -->
+  <h3>Subjects:</h3>
+  <ul>
+    <li ng-repeat="subject in ['Math', 'Physics', 'Chemistry']">
+      {{ subject }}
+    </li>
+  </ul>
+
+</body>
+
+</html>

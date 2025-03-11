@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Array Methods Demo</title>
+</head>
+
+<body>
+  <h1>JavaScript Array Methods with Examples</h1>
+
+  <h3>Original Array:</h3>
+  <p id="array"></p>
+
+  <button onclick="pushExample()">Push</button>
+  <button onclick="popExample()">Pop</button>
+  <button onclick="shiftExample()">Shift</button>
+  <button onclick="unshiftExample()">Unshift</button>
+  <button onclick="mapExample()">Map</button>
+  <button onclick="filterExample()">Filter</button>
+  <button onclick="reduceExample()">Reduce</button>
+  <button onclick="sliceExample()">Slice</button>
+  <button onclick="spliceExample()">Splice</button>
+  <button onclick="sortExample()">Sort</button>
+  <button onclick="reverseExample()">Reverse</button>
+  <button onclick="findExample()">Find</button>
+  <button onclick="findIndexExample()">Find Index</button>
+
+  <h3>Result:</h3>
+  <p id="result"></p>
+
+  <script>
+    let arr = [10, 20, 30, 40, 50];
+    document.getElementById('array').innerText = 'Array: ' + arr;
+
+    function updateArray() {
+      document.getElementById('array').innerText = 'Array: ' + arr;
+    }
+
+    function pushExample() {
+      arr.push(60);
+      updateArray();
+      document.getElementById('result').innerText = 'Push 60: ' + arr;
+    }
+
+    function popExample() {
+      arr.pop();
+      updateArray();
+      document.getElementById('result').innerText = 'Pop: ' + arr;
+    }
+
+    function shiftExample() {
+      arr.shift();
+      updateArray();
+      document.getElementById('result').innerText = 'Shift: ' + arr;
+    }
+
+    function unshiftExample() {
+      arr.unshift(5);
+      updateArray();
+      document.getElementById('result').innerText = 'Unshift 5: ' + arr;
+    }
+
+    function mapExample() {
+      let newArr = arr.map(num => num * 2);
+      document.getElementById('result').innerText = 'Map (x2): ' + newArr;
+    }
+
+    function filterExample() {
+      let newArr = arr.filter(num => num > 20);
+      document.getElementById('result').innerText = 'Filter (>20): ' + newArr;
+    }
+
+    function reduceExample() {
+      let sum = arr.reduce((acc, num) => acc + num, 0);
+      document.getElementById('result').innerText = 'Reduce (Sum): ' + sum;
+    }
+
+    function sliceExample() {
+      let newArr = arr.slice(1, 3);
+      document.getElementById('result').innerText = 'Slice (1,3): ' + newArr;
+    }
+
+    function spliceExample() {
+      arr.splice(2, 1, 100);
+      updateArray();
+      document.getElementById('result').innerText = 'Splice (Replace 30): ' + arr;
+    }
+
+    function sortExample() {
+      arr.sort((a, b) => a - b);
+      updateArray();
+      document.getElementById('result').innerText = 'Sort: ' + arr;
+    }
+
+    function reverseExample() {
+      arr.reverse();
+      updateArray();
+      document.getElementById('result').innerText = 'Reverse: ' + arr;
+    }
+
+    function findExample() {
+      let found = arr.find(num => num > 25);
+      document.getElementById('result').innerText = 'Find (>25): ' + found;
+    }
+
+    function findIndexExample() {
+      let index = arr.findIndex(num => num > 25);
+      document.getElementById('result').innerText = 'Find Index (>25): ' + index;
+    }
+  </script>
+</body>
+
+</html>

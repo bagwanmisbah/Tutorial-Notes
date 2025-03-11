@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Factorial calculator</title>
+  </head>
+  <body>
+    <h2>Factorial calculator</h2>
+    <button onclick="fact_calc()">Find Factorial</button>
+    <script>
+      function fact_calc()
+      {
+        let num=prompt("Enter number to find factorial: ");
+        num=parseInt(num)
+        if(isNaN(num)||num<=0)
+      {
+        alert("Enter valid number ");
+        return;
+      }
+      let fact=1;
+      for(let i=1;i<=num;i++)
+      {
+        fact=fact*i;
+      }
+      alert("Factorial :"+fact);
+      }
+      // if (confirm("Do you want to exit?")) {
+      //     alert("Exiting...");
+      //   } else {
+      //     alert("Stay on the page");
+      //   }
+
+      
+    </script>
+
+  </body>
+</html>

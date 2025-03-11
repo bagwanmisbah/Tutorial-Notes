@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Series</title>
+</head>
+
+<body>
+  <h2>Generate Fibonacci Series</h2>
+  <label for="terms">Enter number of terms:</label>
+  <input type="number" id="terms">
+  <button onclick="generateFibonacci()">Generate</button>
+  <p><b>Fibonacci Series:</b></p>
+  <p id="result"></p>
+
+  <script>
+    // Function to generate Fibonacci Series
+    function generateFibonacci() {
+      // Get number of terms from user
+      var n = document.getElementById("terms").value;
+
+      // Convert input to integer
+      n = parseInt(n);
+
+      // Initialize the first two Fibonacci numbers
+      var a = 0, b = 1, nextTerm;
+      var series = "";
+
+      // Generate Fibonacci series up to n terms
+      for (var i = 1; i <= n; i++) {
+        series += a + ", ";  // Add the number to the series
+        nextTerm = a + b;    // Calculate next term
+        a = b;               // Shift 'a' to 'b'
+        b = nextTerm;        // Shift 'b' to nextTerm
+      }
+
+      // Display the Fibonacci series
+      document.getElementById("result").innerHTML = series;
+    }
+  </script>
+</body>
+
+</html>
